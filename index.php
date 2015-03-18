@@ -23,7 +23,7 @@
         <div class="row text-center">
             <?php
                 include "./psql_connect.php";
-                $query = "SELECT * FROM products";
+                $query = "SELECT * FROM products ORDER BY id";
                 $result = pg_query($pg_conn, $query);
                 while ($row = pg_fetch_row($result)) {
                     echo '<div class="col-md-3 col-sm-6"><div class="thumbnail"><img src="./images/'.$row[4].'" alt="">';

@@ -22,7 +22,7 @@
                 $price = 0;
                 $count = 0;
                 if(isset($_SESSION['items'])) {
-                    $query = "SELECT * FROM products";
+                    $query = "SELECT * FROM products ORDER BY id";
                     $result = pg_query($pg_conn, $query);
                     for ($i = 0; $i < count($_SESSION['items']); $i++) {
 
