@@ -18,7 +18,7 @@
             <h1 class="col-md-12">Your Brick Cart <a href="./index.php" class="btn btn-primary" style="float:right;">Back to Catalog</a></h1>
              <?php
                 session_start();
-                include "psql_connect.php";
+                include "./psql_connect.php";
                 $price = 0;
                 $count = 0;
                 if(isset($_SESSION['items'])) {

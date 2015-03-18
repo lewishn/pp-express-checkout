@@ -22,13 +22,13 @@
         <!-- Items -->
         <div class="row text-center">
             <?php
-                include "psql_connect.php";
+                include "./psql_connect.php";
                 $query = "SELECT * FROM products";
                 $result = pq_query($pg_conn, $query);
                 while ($row = pg_fetch_row($result)) {
                     echo '<div class="col-md-3 col-sm-6"><div class="thumbnail"><img src="./images/'.$row[4].'" alt="">';
                     echo '<div class="caption"><h3>'.$row[1].'</h3>';
-                    echo '<h4>$'.$row[3].'</h4>';
+                    echo '<h4>$'.$row[3].'</hcommit4>';
                     echo '<p>'.$row[2].'</p>';
                     echo '<p><form action="add_to_cart.php" method="get"><button type="submit" name="brick" value="'.$row[0];
                     echo '" class="btn btn-primary">Add to cart</button></form></p></div></div></div>';
