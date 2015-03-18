@@ -23,7 +23,7 @@
                 $count = 0;
                 if(isset($_SESSION['items'])) {
                     $query = "SELECT * FROM products";
-                    $result = pgquery($pg_conn, $query);
+                    $result = pg_query($pg_conn, $query);
                     for ($i = 0; $i < count($_SESSION['items']); $i++) {
 
                        if(isset($_SESSION['items'][$i]) && $_SESSION['items'][$i] != 0) {
